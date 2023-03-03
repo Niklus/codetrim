@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#output {
+  height: 100px;
+  overflow: scroll;
+  padding: 10px;
+  font-size: 14px;
+  width: 900px;
+  background-color: white;
+}
+
+textarea {
+  width: 900px;
+}
+.output-container {
+  display: flex;
+  align-items: flex-start;
+}
+.copy-btn {
+  margin-left: -50px;
+  margin-top: 18px;
+}

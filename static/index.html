@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="options">
+        <button>Minify JS</button>
+        <button>Minify CSS</button>
+        <button>Minify HTML</button>
+        <button>Minify JSON</button>
+      </div>
+      <form>
+        <h1>Minify JS</h1>
+        <textarea name="javascript" id="js" cols="80" rows="20"></textarea
+        ><br />
+        <button>Submit</button>
+      </form>
+      <div class="output-container">
+        <pre id="output"></pre>
+        <button class="copy-btn">Copy</button>
+      </div>
+    </div>
+    <script src="wasm_exec.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
