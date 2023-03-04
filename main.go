@@ -13,7 +13,7 @@ import (
 func main() {
 	done := make(chan struct{}, 0)
 	jsGlobal := js.Global()
-	jsGlobal.Set("wasmMinify", js.FuncOf(minifyJS))
+	jsGlobal.Set("wasmMinifyJs", js.FuncOf(minifyJS))
 	<-done
 }
 
