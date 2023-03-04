@@ -14,18 +14,17 @@ const clearBtn = document.querySelector("#clear");
 
   go.run(result.instance);
 
-  let option;
+  let option = localStorage.getItem("option") ?? "js";
 
-  if (localStorage.getItem("option")) {
-    option = localStorage.getItem("option");
-  } else {
-    option = "js";
-  }
+  const updateDetails = (option) => {
+    title.innerHTML = `Minify ${option.toUpperCase()}`;
+    text_area.placeholder = `Enter your ${
+      option === "js" ? "javascript" : option
+    }...`;
+    localStorage.setItem("option", option);
+  };
 
-  title.innerHTML = `Minify ${option.toUpperCase()}`;
-  text_area.placeholder = `Enter your ${
-    option === "js" ? "javascript" : option
-  }...`;
+  updateDetails(option);
 
   const minify = {
     js: wasmMinifyJs,
@@ -37,18 +36,11 @@ const clearBtn = document.querySelector("#clear");
   options.forEach((element) => {
     element.addEventListener("click", (e) => {
       option = e.target.id;
-
-      title.innerHTML = `Minify ${option.toUpperCase()}`;
-      text_area.placeholder = `Enter your ${
-        option === "js" ? "javascript" : option
-      }...`;
-
       if (option !== localStorage.getItem("option")) {
         text_area.value = "";
         output.innerText = "";
+        updateDetails(option);
       }
-
-      localStorage.setItem("option", option);
     });
   });
 
