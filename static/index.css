@@ -7,6 +7,7 @@ body {
   margin-inline: auto;
   background-color: #eee;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(11, 97, 97);
 }
 
 h1 {
@@ -14,18 +15,25 @@ h1 {
 }
 
 #output {
-  height: 100px;
+  height: 120px;
   overflow: scroll;
   padding: 10px;
   font-size: 14px;
   width: 100%;
-  background-color: white;
   border-radius: 4px;
+  background-color: rgb(246, 239, 229);
+  color: rgb(5, 49, 49);
+  border: 1px solid rgb(5, 49, 49);
+  font-weight: bold;
 }
 
 textarea {
   width: 100%;
   border-radius: 4px;
+  background-color: rgb(246, 239, 229);
+  color: rgb(5, 49, 49);
+  border: 1px solid rgb(5, 49, 49);
+  font-weight: bold;
 }
 .output-container {
   display: flex;
@@ -34,4 +42,14 @@ textarea {
 .copy-btn {
   margin-left: -50px;
   margin-top: 18px;
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.options button {
+  width: 60px;
 }

@@ -10,23 +10,27 @@
   <body>
     <div class="container">
       <h1>Codetrim</h1>
-      <p>Online Code Minifier Tool and Compressor</p>
+      <p>
+        Code Minifier and Compressor. Choose an option below to get started.
+      </p>
       <div class="options">
-        <button id="js">Minify JS</button>
-        <button id="css">Minify CSS</button>
-        <button id="html">Minify HTML</button>
-        <button id="json">Minify JSON</button>
+        <button id="js">JS</button>
+        <button id="css">CSS</button>
+        <button id="html">HTML</button>
+        <button id="json">JSON</button>
+      </div>
+      <div class="top">
+        <h2 id="title"></h2>
+        <button id="clear">Clear</button>
       </div>
       <form>
-        <h2 id="title"></h2>
         <textarea id="text-area" cols="80" rows="20"></textarea><br />
-        <button>Submit</button>
+        <button>Minify</button>
       </form>
       <div class="output-container">
         <pre id="output"></pre>
         <button class="copy-btn">Copy</button>
       </div>
-      <button>Clear</button>
     </div>
     <script src="./wasm/wasm_exec.js"></script>
     <script src="index.js"></script>
