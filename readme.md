@@ -1,5 +1,7 @@
 # Codetrim
 
+Minify JS, CSS, HTML, and JSON with WASM
+
 ## [codetrim.dev](https://codetrim.dev/)
 
 ## Commands
